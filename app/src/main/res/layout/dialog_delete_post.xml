@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/bg"
+    android:layout_gravity="center"
+    android:background="@drawable/shape_12">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/cairo_bold"
+        android:text="Are you sure you want to delete this post"
+        android:textColor="@color/primary_text"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <TextView
+        android:id="@+id/btnYes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginBottom="16dp"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        android:background="@drawable/shape_outbox"
+        android:letterSpacing="0.0"
+        android:fontFamily="@font/cairo_regular"
+        android:text="@string/yes"
+        android:textAllCaps="false"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/primary_text"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle" />
+
+
+    <TextView
+        android:id="@+id/btnNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/shape_outbox"
+        android:fontFamily="@font/cairo_regular"
+        android:letterSpacing="0.0"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        android:text="@string/no"
+        android:textAllCaps="false"
+        android:textColor="@color/primary_text"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

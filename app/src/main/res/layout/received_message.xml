@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="28dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/shape_12"
+    android:backgroundTint="@color/bg">
+    zz
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imgReceivedMessage"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:maxWidth="260dp"
+        android:maxHeight="260dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/zephyrus15_1920x1080"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="8dp"
+        tools:listitem="@layout/custom_chat_images"/>
+
+
+    <TextView
+        android:id="@+id/txtReceivedMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="6dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="6dp"
+        android:fontFamily="@font/cairo_regular"
+        android:gravity="start|top"
+        android:maxWidth="260dp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/primary_text"
+        android:textSize="14sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txtReceivedMessageTime"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.583"
+        tools:text="@string/message" />
+
+    <TextView
+        android:id="@+id/txtReceivedMessageTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/cairo_regular"
+        android:text="@string/_4_min"
+        android:textColor="@color/secondary_text"
+        android:textSize="9sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

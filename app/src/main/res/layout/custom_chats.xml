@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="28dp"
+    android:paddingHorizontal="28dp">
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imgLatestMessageUser"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="12dp"
+        tools:src="@color/primary" />
+
+    <TextView
+        android:id="@+id/txtLatestMessageUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:fontFamily="@font/cairo_medium"
+        android:text="@string/full_name"
+        android:textColor="@color/primary_text"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/imgLatestMessageUser"
+        app:layout_constraintTop_toTopOf="@+id/imgLatestMessageUser" />
+
+    <TextView
+        android:id="@+id/txtLatestMessage"
+        android:ellipsize="end"
+        android:layout_width="0dp"
+        android:singleLine="true"
+        android:textAlignment="viewStart"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:fontFamily="@font/cairo_regular"
+        android:text="@string/latest_message"
+        android:textColor="@color/secondary_text"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgLatestMessageUser"
+        app:layout_constraintEnd_toStartOf="@+id/txtLatestMessageTime"
+        app:layout_constraintStart_toEndOf="@+id/imgLatestMessageUser"
+        app:layout_constraintTop_toBottomOf="@+id/txtLatestMessageUserName" />
+
+
+    <TextView
+        android:id="@+id/txtLatestMessageTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cairo_regular"
+        android:text="3:00pm"
+        android:textColor="@color/secondary_text"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txtLatestMessageUserName" />
+
+    <ImageView
+        android:id="@+id/imgNew"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:visibility="gone"
+        android:background="@drawable/shape_circle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txtLatestMessageTime"
+        app:layout_constraintStart_toStartOf="@+id/txtLatestMessageTime"
+        app:layout_constraintTop_toBottomOf="@+id/txtLatestMessageTime" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

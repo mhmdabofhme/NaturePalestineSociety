@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".activities.EditProfileActivity">
+
+
+    <ImageView
+        android:id="@+id/imgBack"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="18dp"
+        android:background="@drawable/shape_outbox"
+        android:padding="10dp"
+        android:src="@drawable/arrow_left"
+        app:layout_constraintBottom_toBottomOf="@+id/txtTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtTitle" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/cairo_bold"
+        android:text="@string/edit_profile"
+        android:textColor="@color/primary_text"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/imgBack"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imgSave"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="18dp"
+        android:padding="10dp"
+        android:src="@drawable/check"
+        app:layout_constraintBottom_toBottomOf="@+id/txtTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtTitle"
+        app:tint="@color/primary" />
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imgUser"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="28dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/no_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+        app:riv_corner_radius="12dp" />
+
+    <TextView
+        android:id="@+id/txtEditPicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/edit_picture"
+        android:textColor="@color/primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgUser" />
+
+
+    <TextView
+        android:id="@+id/txtFullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/cairo_bold"
+        android:text="@string/full_name"
+        android:textAllCaps="true"
+        android:textColor="@color/primary_text"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtEditPicture" />
+
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:textAlignment="viewStart"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_edit_text"
+        android:paddingVertical="14dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="40dp"
+        tools:text="Mohammed Abo Haseera"
+        android:textColor="@color/primary_text"
+        android:textColorHint="@color/secondary_text"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtFullName" />
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/cairo_bold"
+        android:text="@string/email"
+        android:textAllCaps="true"
+        android:textColor="@color/primary_text"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editName" />
+
+
+    <EditText
+        android:id="@+id/editEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:textAlignment="viewStart"
+        android:background="@drawable/shape_edit_text"
+        android:inputType="textEmailAddress"
+        android:paddingVertical="14dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="40dp"
+        tools:text="mohammed@mohammed.com"
+        android:textColor="@color/primary_text"
+        android:textColorHint="@color/secondary_text"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtEmail" />
+
+
+    <TextView
+        android:id="@+id/txtCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/cairo_bold"
+        android:text="@string/country"
+        android:textAllCaps="true"
+        android:textColor="@color/primary_text"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editEmail" />
+
+    <!--    <com.hbb20.CountryPickerView-->
+    <!--        android:id="@+id/countryPicker"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginHorizontal="20dp"-->
+    <!--        android:background="@drawable/shape_edit_text"-->
+    <!--        app:cp_initialSelectionMode="specificCountry"-->
+    <!--        app:cp_initialSpecificCountry="@string/palestine"-->
+    <!--        android:layout_marginTop="15dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/txtCountry" />-->
+
+    <com.skydoves.powerspinner.PowerSpinnerView
+        android:id="@+id/spinnerCountry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="15dp"
+        android:padding="11dp"
+        android:hint="@string/country"
+        app:spinner_arrow_tint="@color/primary_text"
+        android:textColorHint="@color/primary_text"
+        android:background="@drawable/shape_edit_text"
+        app:background="@drawable/shape_edit_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtCountry" />
+
+
+    <TextView
+        android:id="@+id/txtAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/cairo_bold"
+        android:text="@string/about"
+        android:textAllCaps="true"
+        android:textColor="@color/primary_text"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinnerCountry" />
+
+
+    <EditText
+        android:id="@+id/editAbout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_edit_text"
+        android:textAlignment="viewStart"
+        android:paddingVertical="14dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="40dp"
+        tools:text="@string/travel_adventure_lifestyle_photographer_nature_activist"
+        android:textColor="@color/primary_text"
+        android:textColorHint="@color/secondary_text"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtAbout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

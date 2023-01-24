@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/bg"
+    android:layout_gravity="center"
+    android:background="@drawable/shape_12">
+
+    <TextView
+        android:id="@+id/txtCreateProject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/cairo_bold"
+        android:text="@string/create_project"
+        android:textColor="@color/primary_text"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/editProject"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/shape_edit_text"
+        android:hint="@string/project_name"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="14dp"
+        android:fontFamily="@font/cairo_medium"
+        android:textColor="@color/primary_text"
+        android:textColorHint="@color/secondary_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtCreateProject" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/shape_btn"
+        android:letterSpacing="0.0"
+        android:fontFamily="@font/cairo_bold"
+        android:text="@string/save"
+        android:textAllCaps="false"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:backgroundTint="@color/primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editProject" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

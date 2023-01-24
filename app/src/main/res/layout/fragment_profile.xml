@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".activities.fragments.ProfileFragment">
+
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="23dp"
+        android:src="@drawable/image_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgLogo">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_layout_bottom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/imgUser"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginTop="31dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:riv_corner_radius="12dp" />
+
+                <TextView
+                    android:id="@+id/txtUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/cairo_medium"
+                    android:lineHeight="20sp"
+                    android:textColor="@color/primary_text"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@id/imgUser"
+                    app:layout_constraintTop_toTopOf="@id/imgUser"
+                    tools:text="@string/anthony_khalileh" />
+
+
+                <TextView
+                    android:id="@+id/txtCountry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/cairo_medium"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@id/imgUser"
+                    app:layout_constraintTop_toBottomOf="@id/txtUsername"
+                    tools:text="@string/palestine" />
+
+
+                <TextView
+                    android:id="@+id/txtSettings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="28dp"
+                    android:drawableEnd="@drawable/settings"
+                    android:drawablePadding="6dp"
+                    android:fontFamily="@font/cairo_medium"
+                    android:paddingVertical="5dp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="7dp"
+                    android:text="@string/settings"
+                    android:textColor="@color/primary_text_80"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgUser"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imgUser" />
+
+                <TextView
+                    android:id="@+id/txtObservations"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/cairo_bold"
+                    android:textColor="@color/primary_text"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imgUser"
+                    tools:text="518" />
+
+                <TextView
+                    android:id="@+id/txtLabelObservations"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/cairo_bold"
+                    android:text="@string/observations"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/txtObservations"
+                    app:layout_constraintTop_toBottomOf="@id/imgUser" />
+
+
+                <TextView
+                    android:id="@+id/txtSpecies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/cairo_bold"
+                    android:text="35"
+                    android:textColor="@color/primary_text"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/txtLabelObservations"
+                    app:layout_constraintTop_toBottomOf="@id/imgUser" />
+
+                <TextView
+                    android:id="@+id/txtLabelSpecies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/cairo_bold"
+                    android:text="@string/species"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/txtSpecies"
+                    app:layout_constraintTop_toBottomOf="@id/imgUser" />
+
+
+                <TextView
+                    android:id="@+id/txtAbout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/cairo_bold"
+                    android:text="@string/about"
+                    android:textAllCaps="true"
+                    android:textColor="@color/primary_text"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtObservations" />
+
+
+                <TextView
+                    android:id="@+id/txtAboutInfo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="30dp"
+                    android:fontFamily="@font/cairo_regular"
+                    android:lineHeight="22sp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/primary_text"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toTopOf="@id/view"
+                    app:layout_constraintEnd_toStartOf="@id/txtEditProfile"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtAbout"
+                    tools:text="@string/travel_adventure_lifestyle_photographer_nature_activist" />
+
+
+                <TextView
+                    android:id="@+id/txtEditProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="28dp"
+                    android:background="@drawable/shape_radius4"
+                    android:backgroundTint="@color/bg"
+                    android:fontFamily="@font/cairo_bold"
+                    android:letterSpacing="0.1"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="5dp"
+                    android:text="@string/edit_profile"
+                    android:textAllCaps="false"
+                    android:textColor="@color/primary_text"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/txtAboutInfo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/txtAboutInfo" />
+
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="38dp"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginBottom="22dp"
+                    android:background="@drawable/shape_full_radius"
+                    android:backgroundTint="@color/primary_text_40"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutPosts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutTop">
+
+
+                <View
+                    android:id="@+id/viewCenter"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <com.skydoves.powerspinner.PowerSpinnerView
+                    android:id="@+id/spinnerSpecies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="28dp"
+                    android:background="@drawable/shape_edit_text"
+                    android:gravity="center"
+                    android:hint="@string/species"
+                    android:paddingVertical="5dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="10dp"
+                    android:textColor="@color/primary_text"
+                    android:textColorHint="@color/primary_text"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@+id/viewCenter"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:spinner_arrow_gravity="end"
+                    app:spinner_arrow_padding="20dp"
+                    app:spinner_arrow_tint="@color/primary_text"
+                    app:spinner_divider_color="@color/white"
+                    app:spinner_divider_show="true"
+                    app:spinner_divider_size="0.4dp"
+                    app:spinner_item_height="46dp"
+                    app:spinner_popup_animation="dropdown"
+                    app:spinner_popup_background="@color/white"
+                    app:spinner_popup_elevation="14dp" />
+
+
+                <com.skydoves.powerspinner.PowerSpinnerView
+                    android:id="@+id/spinnerProjects"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/shape_edit_text"
+                    android:gravity="center"
+                    android:hint="@string/projects"
+                    android:paddingVertical="5dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="10dp"
+                    android:textColor="@color/primary_text"
+                    android:textColorHint="@color/primary_text"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/viewCenter"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:spinner_arrow_gravity="end"
+                    app:spinner_arrow_padding="20dp"
+                    app:spinner_arrow_tint="@color/primary_text"
+                    app:spinner_divider_color="@color/white"
+                    app:spinner_divider_show="true"
+                    app:spinner_divider_size="0.4dp"
+                    app:spinner_item_height="46dp"
+                    app:spinner_popup_animation="dropdown"
+                    app:spinner_popup_background="@color/white"
+                    app:spinner_popup_elevation="14dp" />
+
+                <!--
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/textFieldSpecies"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="38dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="28dp"
+                                android:background="@drawable/shape_edit_text"
+                                app:boxStrokeColor="@color/secondary_text_20"
+                                app:boxStrokeWidth="0dp"
+                                app:endIconDrawable="@drawable/arrow_right"
+                                app:endIconTint="@color/primary_text"
+                                app:hintEnabled="false"
+                                app:layout_constraintEnd_toStartOf="@+id/viewCenter"
+                                app:layout_constraintTop_toBottomOf="@+id/layoutTop">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/editSpecies"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/white"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@font/cairo_medium"
+                                    android:inputType="none"
+                                    android:singleLine="true"
+                                    android:text="Species"
+                                    android:textColor="@color/primary_text"
+                                    android:textSize="10sp" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/textFieldProjects"
+                                android:visibility="invisible"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="38dp"
+                                android:layout_marginStart="28dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@drawable/shape_edit_text"
+                                app:boxStrokeColor="@color/secondary_text_20"
+                                app:boxStrokeWidth="0dp"
+                                app:endIconDrawable="@drawable/arrow_right"
+                                app:endIconTint="@color/primary_text"
+                                app:hintEnabled="false"
+                                app:layout_constraintStart_toEndOf="@+id/viewCenter"
+                                app:layout_constraintTop_toBottomOf="@+id/layoutTop">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/editProjects"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/white"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@font/cairo_medium"
+                                    android:inputType="none"
+                                    android:singleLine="true"
+                                    android:text="Projects"
+                                    android:textColor="@color/primary_text"
+                                    android:textSize="10sp" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                -->
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recPosts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="28dp"
+                    android:layout_marginTop="15dp"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/spinnerProjects"
+                    tools:listitem="@layout/custom_post" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/imgNoData"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="28dp"
+                android:src="@drawable/no_data_amico"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutTop" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

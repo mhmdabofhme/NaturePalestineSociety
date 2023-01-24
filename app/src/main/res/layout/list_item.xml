@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:backgroundTint="@color/white"
+    android:ellipsize="end"
+    android:fontFamily="@font/cairo_medium"
+    android:gravity="start|center_vertical"
+    android:paddingStart="16dp"
+    android:singleLine="true"
+    android:text="data"
+    android:textAlignment="viewStart"
+    android:textAppearance="?attr/textAppearanceSubtitle1"
+    android:textColor="@color/primary_text"
+    android:textColorHint="@color/secondary_text"
+    android:textSize="16sp" />

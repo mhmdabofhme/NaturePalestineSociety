@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.SearchActivity">
+
+    <ImageView
+        android:id="@+id/imgBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:background="@drawable/shape_outbox"
+        android:padding="10dp"
+        android:src="@drawable/arrow_left"
+        app:layout_constraintBottom_toBottomOf="@+id/editSearch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editSearch" />
+
+    <EditText
+        android:id="@+id/editSearch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/shape_8"
+        android:backgroundTint="@color/secondary_text_20"
+        android:drawableStart="@drawable/ic_baseline_search_24"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/secondary_text"
+        android:fontFamily="@font/cairo_medium"
+        android:hint="@string/search_in_friends"
+        android:padding="14dp"
+        android:singleLine="true"
+        android:textColor="@color/primary_text"
+        android:textColorHint="@color/secondary_text"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgBack"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recUsers"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/bg"
+        android:orientation="vertical"
+        android:paddingTop="28dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editSearch"
+        tools:listitem="@layout/custom_users" />
+
+
+    <ImageView
+        android:id="@+id/imgNoData"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="28dp"
+        android:src="@drawable/no_data_amico"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editSearch" />
+
+
+    <include
+        android:id="@+id/layoutProgress"
+        layout="@layout/custom_bottom_progressbar"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "936780703247",
+    "project_id": "nature-palestine-society",
+    "storage_bucket": "nature-palestine-society.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:936780703247:android:39a6a4f60e4d11ddd8257a",
+        "android_client_info": {
+          "package_name": "com.example.naturepalestinesociety"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "936780703247-lsibre08s01g4ik3dcnr2i8vhl4eb4q0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBszvYUNYdAX2mTjOFAb0HQ8Le5IdYVKSk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "936780703247-lsibre08s01g4ik3dcnr2i8vhl4eb4q0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

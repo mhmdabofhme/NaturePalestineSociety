@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.fragments.AddFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="38dp"
+        android:paddingTop="40dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="750dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/imgUser"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="27dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:riv_corner_radius="12dp"
+                tools:src="@drawable/shape_story" />
+
+
+            <TextView
+                android:id="@+id/txtUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/cairo_medium"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/imgUser"
+                app:layout_constraintStart_toEndOf="@id/imgUser"
+                app:layout_constraintTop_toTopOf="@id/imgUser"
+                tools:text="@string/full_name" />
+
+
+            <TextView
+                android:id="@+id/txtProject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/shape_full_radius"
+                android:backgroundTint="@color/bg"
+                android:fontFamily="@font/cairo_regular"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="2dp"
+                android:text="@string/project_1"
+                android:textColor="@color/secondary_text"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/txtUsername"
+                app:layout_constraintTop_toBottomOf="@+id/txtUsername" />
+
+
+            <TextView
+                android:id="@+id/txtSpecies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/shape_full_radius"
+                android:backgroundTint="@color/bg"
+                android:fontFamily="@font/cairo_regular"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="2dp"
+                android:text="@string/species_1"
+                android:textColor="@color/secondary_text"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/txtProject"
+                app:layout_constraintTop_toBottomOf="@+id/txtUsername" />
+
+
+            <TextView
+                android:id="@+id/txtPost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="28dp"
+                android:background="@drawable/shape_radius4"
+                android:backgroundTint="@color/primary"
+                android:drawablePadding="9dp"
+                android:fontFamily="@font/cairo_medium"
+                android:paddingVertical="5dp"
+                android:paddingStart="9dp"
+                android:paddingEnd="7dp"
+                android:text="@string/post"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:drawableEndCompat="@drawable/check"
+                app:layout_constraintBottom_toBottomOf="@+id/imgUser"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imgUser" />
+
+
+            <EditText
+                android:id="@+id/editObserve"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="28dp"
+                android:layout_marginTop="38dp"
+                android:backgroundTint="@color/white"
+                android:gravity="start|top"
+                android:hint="@string/what_did_you_observe"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgUser" />
+
+
+            <ImageView
+                android:id="@+id/imgPost"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="28dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="centerInside"
+                tools:src="@drawable/zephyrus15_1920x1080"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editObserve" />
+
+            <ImageView
+                android:id="@+id/imgPostCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@drawable/ic_baseline_cancel_24"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/imgPost"
+                app:layout_constraintTop_toTopOf="@id/imgPost" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgPost">
+
+                <fragment
+                    android:id="@+id/mapLocation"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginHorizontal="28dp"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+
+                <TextView
+                    android:id="@+id/txtLocation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cairo_medium"
+                    android:gravity="start|top"
+                    android:textColor="@color/primary_text"
+                    android:textSize="14sp"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="@+id/mapLocation"
+                    app:layout_constraintStart_toStartOf="@+id/mapLocation"
+                    app:layout_constraintTop_toBottomOf="@+id/mapLocation" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/bottomSheet"
+        layout="@layout/layout_persistent_bottom_sheet" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
